@@ -180,6 +180,14 @@
     // Set side bar controller object
     style.sideBarController = self;
 }
+    
+- (void)setPanGestureEnabled:(BOOL)panGestureEnabled
+{
+    _panGestureEnabled = panGestureEnabled;
+    self.panGestureRecognizer.enabled = panGestureEnabled;
+    self.leftEdgeGestureRecognizer.enabled = panGestureEnabled;
+    self.rightEdgeGestureRecognizer.enabled = panGestureEnabled;
+}
 
 
 #pragma mark - PRIVATE METHODS
